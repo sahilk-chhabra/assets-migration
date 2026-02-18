@@ -1,0 +1,29 @@
+{
+  "marketo": {
+    "identity_url": "https://123-ABC-456.mktorest.com",
+    "rest_base_url": "https://123-ABC-456.mktorest.com/rest",
+    "client_id": "${MARKETO_CLIENT_ID}",
+    "client_secret": "${MARKETO_CLIENT_SECRET}",
+    "folder_id": 1001,
+    "folder_type": "Folder",
+    "endpoints": {
+      "list_templates": "/asset/v1/emailTemplates.json",
+      "get_template_by_id": "/asset/v1/emailTemplate/{id}.json",
+      "get_template_content": "/asset/v1/emailTemplate/{id}/content.json",
+      "find_by_name": "/asset/v1/emailTemplate/byName.json",
+      "create_template": "/asset/v1/emailTemplates.json",
+      "update_template_content": "/asset/v1/emailTemplate/{id}/content.json"
+    }
+  },
+  "hubspot": {
+    "access_token": "${HUBSPOT_ACCESS_TOKEN}",
+    "base_url": "https://api.hubapi.com",
+    "endpoints": {
+      "list_templates": "/marketing/v3/emails",
+      "get_template_by_id": "/marketing/v3/emails/{id}",
+      "search_templates": "/marketing/v3/emails/search",
+      "create_template": "/marketing/v3/emails",
+      "update_template": "/marketing/v3/emails/{id}"
+    }
+  }
+}
