@@ -1,0 +1,31 @@
+{
+  "marketo": {
+    "identity_url": "https://123-ABC-456.mktorest.com",
+    "rest_base_url": "https://123-ABC-456.mktorest.com/rest",
+    "client_id": "${MARKETO_CLIENT_ID}",
+    "client_secret": "${MARKETO_CLIENT_SECRET}",
+    "batch_size": 300,
+    "fields": [
+      "id",
+      "email",
+      "firstName",
+      "lastName",
+      "company",
+      "title",
+      "phone",
+      "updatedAt"
+    ],
+    "endpoints": {
+      "identity_token": "/identity/oauth/token",
+      "list_leads": "/v1/leads.json"
+    }
+  },
+  "cdp": {
+    "base_url": "https://api.example-cdp.com",
+    "api_key": "${CDP_API_KEY}",
+    "ingestion_path": "/v1/profiles/upsert",
+    "batch_size": 100,
+    "source_name": "marketo",
+    "endpoints": {}
+  }
+}
